@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Płótno</title>
+
+</head>
+<body>
+<main>
+    <h1>Płótno</h1>
+    <canvas id="canvas" style="border:1px solid #000000;" width="500" height="500">
+        Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas"
+    </canvas>
+</main>
+
+<script>
+    "use strict";                                       // Nie wyłączaj trybu ścisłego
+    var canvas = document.getElementById('canvas');     // Tutaj jest użyty standard W3C DOM — będzie on tematem następnych ćwiczeń
+    var ctx = canvas.getContext("2d");                      // Utworzenie obiektu 'CanvasRenderingContext2D'
+    ctx.fillText("Hello World", 40, canvas.height / 2); // Wykreślenie podanego tekstu na płótnie
+
+</script>
+
+</body>
+</html>
