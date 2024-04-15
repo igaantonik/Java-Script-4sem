@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation with React Components</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone"></script>
+
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+  const { useState, useEffect } = React;
+
+  function Counter({ initial, delay }) {
+    const [counter, setCounter] = useState(parseInt(initial));
+    const [isActive, setIsActive] = useState(false);
+    useEffect(() => {
+      let interval = null;
+      if (isActive) {
+        interval = setInterval(() => {
+          setCounter((prevCounter) => prevCounter + 1);
+        }, delay);
+      }
+      return () => clearInterval(interval);
+    }, [isActive, delay]);
+
+    return (
+            <div style={{ color:'#1c3f1a',backgroundColor: '#d7e4d6', padding: '20px', margin: '10px 0' }}>
+              <div>Counter→ <span style={{ color: 'red' }}>{counter}</span></div>
+              <button onClick={() => setIsActive(true)}>Start</button>
+              <button onClick={() => setIsActive(false)}>Stop</button>
+            </div>
+    );
+  }
+
+  ReactDOM.render(
+          <>
+            <Counter initial="10" delay={1000} />
+            <Counter initial="15" delay={500} />
+          </>,
+          document.getElementById('root')
+  );
+</script>
+
+</body>
+</html>
