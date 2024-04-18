@@ -1,0 +1,32 @@
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(30deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(-30deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 20s linear infinite;
+}
+
+
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.reserved {
+  background-color: lightgray; /* Kolor szary, gdy pokój jest zarezerwowany */
+}
