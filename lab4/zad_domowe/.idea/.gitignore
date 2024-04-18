@@ -4,4 +4,4 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
-node_modules/
+cw4/node_modules/
