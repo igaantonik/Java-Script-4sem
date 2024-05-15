@@ -1,0 +1,7 @@
+[
+  {"number": "101", "beds": 2, "price": 200},
+  {"number": "102", "beds": 2, "price": 200},
+  {"number": "103", "beds": 3, "price": 250},
+  {"number": "104", "beds": 4, "price": 300},
+  {"number": "105", "beds": 5, "price": 350}
+]

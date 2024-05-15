@@ -1,0 +1,80 @@
+[
+  {
+    "guest": "Ala Nowak",
+    "room": "102",
+    "arrivalDate": "2024-03-29",
+    "checkoutDate": "2024-04-14"
+  },
+  {
+    "guest": "Iga Antonik",
+    "room": "103",
+    "arrivalDate": "2024-04-10",
+    "checkoutDate": "2024-04-20"
+  },
+  {
+    "guest": "Marian OK",
+    "room": "101",
+    "arrivalDate": "2024-06-02",
+    "checkoutDate": "2024-06-05"
+  },
+  {
+    "guest": "Katarzyna M",
+    "room": "103",
+    "arrivalDate": "2024-05-24",
+    "checkoutDate": "2024-05-26"
+  },
+  {
+    "guest": "Helena Serwal",
+    "room": "101",
+    "arrivalDate": "2024-04-13",
+    "checkoutDate": "2024-04-30"
+  },
+  {
+    "guest": "Iga Antonik",
+    "room": "105",
+    "arrivalDate": "2024-12-04",
+    "checkoutDate": "2024-12-12"
+  },
+  {
+    "guest": "Iga Antonik",
+    "room": "101",
+    "arrivalDate": "2024-04-16",
+    "checkoutDate": "2024-04-19"
+  },
+  {
+    "guest": "Marta Kot",
+    "room": "104",
+    "arrivalDate": "2024-05-14",
+    "checkoutDate": "2024-05-15"
+  },
+  {
+    "guest": "Marta Kot",
+    "room": "105",
+    "arrivalDate": "2024-05-14",
+    "checkoutDate": "2024-05-15"
+  },
+  {
+    "guest": "Piotr Grzyb",
+    "room": "101",
+    "arrivalDate": "2024-05-14",
+    "checkoutDate": "2024-05-15"
+  },
+  {
+    "guest": "Iga Antonik",
+    "room": "102",
+    "arrivalDate": "2024-05-28",
+    "checkoutDate": "2024-05-30"
+  },
+  {
+    "guest": "Ewa Szyszka",
+    "room": "101",
+    "arrivalDate": "2024-05-25",
+    "checkoutDate": "2024-05-27"
+  },
+  {
+    "guest": "Ewa Szyszka",
+    "room": "101",
+    "arrivalDate": "2024-06-15",
+    "checkoutDate": "2024-06-17"
+  }
+]

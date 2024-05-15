@@ -6,6 +6,7 @@
 // const { URL } = require('node:url');
 import http from "node:http";
 import { URL } from "node:url";
+import fs from "node:fs";
 
 /**
  * Handles incoming requests.
@@ -49,32 +50,44 @@ function requestListener(request, response) {
     case "GET /":
       /* ************************************************** */
       // Creating an answer header — we inform the browser that the returned data is HTML
-      response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-      /* ************************************************** */
-      // Setting a response body
-      response.write(`
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vanilla Node.js application</title>
-  </head>
-  <body>
-    <main>
-      <h1>Vanilla Node.js application</h1>
-      <form method="GET" action="/submit">
-        <label for="name">Give your name</label>
-        <input name="name">
-        <br>
-        <input type="submit">
-        <input type="reset">
-      </form>
-    </main>
-  </body>
-</html>`);
-      /* ************************************************** */
-      response.end(); // The end of the response — send it to the browser
+//       response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+//       /* ************************************************** */
+//       // Setting a response body
+//       response.write(`
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="utf-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1">
+//     <title>Vanilla Node.js application</title>
+//   </head>
+//   <body>
+//     <main>
+//       <h1>Vanilla Node.js application</h1>
+//       <form method="GET" action="/submit">
+//         <label for="name">Give your name</label>
+//         <input name="name">
+//         <br>
+//         <input type="submit">
+//         <input type="reset">
+//       </form>
+//     </main>
+//   </body>
+// </html>`);
+//       /* ************************************************** */
+//       response.end(); // The end of the response — send it to the browser
+//       break;
+      fs.readFile("src/index.html", "utf8", (err, data) => {
+        if (err) {
+          response.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+          response.write("Error reading HTML file");
+          response.end();
+        } else {
+          response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+          response.write(data);
+          response.end();
+        }
+      });
       break;
 
     /* 
